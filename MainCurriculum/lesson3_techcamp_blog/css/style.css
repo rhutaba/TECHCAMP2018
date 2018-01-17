@@ -17,12 +17,18 @@ h1, h2, h3, h4, h5, h6, p, body {
   margin: 0 auto;
 }
 
-.left-content {
+.left_content {
   width: 700px;
   float: left;
 }
 
-.right-content {
+.right_content {
   width: 140px;
-  float: left;
+  float: right;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
 }
