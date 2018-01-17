@@ -69,8 +69,28 @@ h4 {
 
 .contents .left_content article {
   border-bottom: 1px solid #bebebe;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
+
+.contents .left_content .separate li {
+  padding: 0 10px;
+  margin: 2px;
+  float: left;
+  list-style: none;
+  font-size: 14px;
+  color: #a0a0a0;
+  border-right: 1px solid #a0a0a0;
+}
+
+.contents .left_content li.separate_last_child {
+  border-right: none;
+}
+
+.contents .left_content header {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #a0a0a0;
+}
+
 
 .bold {
   font-weight: bold;
