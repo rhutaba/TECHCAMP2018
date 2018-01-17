@@ -66,3 +66,8 @@ h4 {
   border: 0;
   border-top: 1px solid #ca493c;
 }
+
+.contents .left_content article {
+  border-bottom: 1px solid #bebebe;
+  padding-bottom: 30px;
+}
