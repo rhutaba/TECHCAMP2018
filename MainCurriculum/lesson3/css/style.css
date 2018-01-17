@@ -1,0 +1,15 @@
+header {
+  background-color: gray;
+  height: 150px;
+}
+
+.contents {
+  background-color: #C0C0C0;
+  height: 400px;
+  width: 960px;
+}
+
+footer{
+  background-color: gray;
+  height: 50px;
+}
