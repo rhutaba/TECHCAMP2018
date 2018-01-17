@@ -57,6 +57,8 @@ h4 {
 
 #mainHeader p {
   margin: 30px 0 0 0;
+  color: white;
+  font-family: serif;
 }
 
 .contents .left_content hr {
