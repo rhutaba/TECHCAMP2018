@@ -79,3 +79,19 @@ ul li {
   padding-right: 10px;
   float: left;
 }
+
+td {
+  margin: 0;
+  padding-left: 10px;
+  line-height: 30px;
+}
+
+.stylist-image {
+  height: 100px;
+  width: 100px;
+}
+
+.stylist-name {
+  font-size: 16px;
+  text-align: center;
+}
