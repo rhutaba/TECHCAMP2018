@@ -71,7 +71,7 @@ footer {
 ul {
   margin: 0;
   padding: 0;
-  list-style-type: none;
+  list-style: none;
 }
 
 ul li {
@@ -94,4 +94,12 @@ td {
 .stylist-name {
   font-size: 16px;
   text-align: center;
+}
+
+a {
+  color: red;
+}
+
+a:hover {
+  color: blue;
 }
