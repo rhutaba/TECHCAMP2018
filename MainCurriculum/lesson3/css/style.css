@@ -50,3 +50,10 @@ footer {
   background-color: gray;
   height: 50px;
 }
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
