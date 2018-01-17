@@ -60,3 +60,10 @@ footer {
   display: block;
 }
 
+.title {
+  font-family: fantasy;
+}
+
+.heading-sentence {
+  font-size: 18px;
+}
