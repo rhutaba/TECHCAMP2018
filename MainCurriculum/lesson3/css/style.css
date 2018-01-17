@@ -67,3 +67,15 @@ footer {
 .heading-sentence {
   font-size: 18px;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul li {
+  margin: 0;
+  padding-right: 10px;
+  float: left;
+}
