@@ -75,3 +75,7 @@ h4 {
 .bold {
   font-weight: bold;
 }
+
+.underline {
+  border-bottom: solid 1px black;
+}
