@@ -99,3 +99,32 @@ h4 {
 .underline {
   border-bottom: solid 1px black;
 }
+
+.contents .pagenation {
+  padding: 10px 0;
+  font-size: 12px;
+}
+
+.contents .pagenation li {
+  border: 1px solid #e3e3e3;
+  list-style: none;
+}
+
+.contents .pagenation li a {
+  display: block;
+  padding: 5px 10px;
+  font-size: 16px;
+  color: #ca493c;
+}
+
+.contents .pagenation li a:hover {
+  background-color: #f7f7f6;
+}
+
+.contents .pagenation li.prev {
+  float: left;
+}
+
+.contents .pagenation li.next {
+  float: right;
+}
