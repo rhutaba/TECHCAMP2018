@@ -7,9 +7,9 @@
   <%= csrf_meta_tags %>
   <script type="text/javascript">
     WebFontConfig = {
-      google: { families: [ 'Unica+One::latin' ] }
+      google: {families: ['Unica+One::latin']}
     };
-    (function() {
+    (function () {
       var wf = document.createElement('script');
       wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
         '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
@@ -27,7 +27,14 @@
     <h1 class="grid-6"><a href="/">PicTweet</a></h1>
     <% if user_signed_in? %>
       <div class="user_nav grid-6">
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        <span><% current_user.nickname %>
+          <ul class="user_info">
+            <li>
+              <a href="/users/<%= current_user.id %>">マイページ</a>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            </li>
+          </ul>
+        </span>
         <a class="post" href="/tweets/new">投稿する</a>
       </div>
     <% else %>

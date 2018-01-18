@@ -4,4 +4,8 @@ Rails.application.routes.draw do
   get 'tweets' => 'tweets#index'
   get 'tweets/new' => 'tweets#new'
   post 'tweets' => 'tweets#create'
+  get 'users/:id' => 'users#show'  # MyPageへのルーティング
+  delete 'tweets/:id' => 'tweets#destroy'
+  get 'tweets/:id/edit' => 'tweets#edit'
+  patch 'tweets/:id' => 'tweets#update'
 end
