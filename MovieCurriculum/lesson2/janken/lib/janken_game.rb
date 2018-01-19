@@ -7,22 +7,18 @@ def game(player, npc, janken)
   npc.hand_shape(rand(0..2))
 
   # じゃんけんの手を出し合う
-  puts "ぽん！"
   janken.battle(player.hand_out, npc.hand_out)
 
-
   # じゃんけんの結果を表示する
-  case janken.result
+  result = janken.result
+  case result
   when true
     puts "プレイヤーの勝利"
   when false
     puts "NPCの勝利"
   when nil
-    puts "あいこ"
   end
-
-  # あいこか否かを返す
-  janken.result.nil?
+  result
 end
 
 # 出場者が互いに場に手を出す
@@ -32,5 +28,9 @@ npc = Player::Hand.new
 # じゃんけんゲームがスタート
 janken = Game::Janken.new
 
-while game(player, npc, janken)
+continue = true
+
+while continue do
+  result = game(player, npc, janken)
+  continue = result.nil?
 end
