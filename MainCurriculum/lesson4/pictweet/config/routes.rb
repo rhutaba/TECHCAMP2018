@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'tweets#index'
-  get 'tweets' => 'tweets#index'
-  get 'tweets/new' => 'tweets#new'
-  post 'tweets' => 'tweets#create'
-  get 'users/:id' => 'users#show'  # MyPageへのルーティング
-  delete 'tweets/:id' => 'tweets#destroy'
-  get 'tweets/:id/edit' => 'tweets#edit'
-  patch 'tweets/:id' => 'tweets#update'
+  resources :users, only: [:show]
+  resources :tweets do
+    resources :comments, only: [:create]
+  end
 end
