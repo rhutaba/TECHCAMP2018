@@ -10,7 +10,6 @@ class Game
     RESULT_MATRIX = [[DRAW, WIN, LOSE], [LOSE, DRAW, WIN], [WIN, LOSE, DRAW]]
 
     def initialize
-      puts "最初はグー、じゃんけん"
       @hand_of_player1 = STONE
       @hand_of_player2 = STONE
     end
