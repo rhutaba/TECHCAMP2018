@@ -3,7 +3,7 @@
 # * 5で割り切れるときBuzz
 # * 15倍数のときFizzBuzz
 # * その他の場合、数をそのまま表示する
-# 
+#
 def fizz_buzz
   100.times do |index|
 
