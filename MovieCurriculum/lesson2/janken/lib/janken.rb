@@ -8,22 +8,11 @@ class Game
     DRAW = nil
 
     def initialize
-      puts "最初はグー！"
       @hand_of_player1 = STONE
       @hand_of_player2 = STONE
-      @continue = false
     end
 
     def battle(hand_of_player1, hand_of_player2)
-      if @continue
-        puts "あいこ、で、しょ！"
-      else
-        puts "じゃん、けん、ぽん！"
-      end
-
-      display_shape_hand(hand_of_player1)
-      display_shape_hand(hand_of_player2)
-
       @hand_of_player1 = hand_of_player1
       @hand_of_player2 = hand_of_player2
     end
@@ -31,7 +20,6 @@ class Game
     # 勝ち: true、負け: false、あいこ: nil
     def result
       if draw?
-        @continue = true
         nil
       else
         case @hand_of_player1
@@ -43,10 +31,6 @@ class Game
           paper_winning?(@hand_of_player2)
         end
       end
-    end
-
-    def continue?
-      !draw?
     end
 
     def draw?
@@ -63,17 +47,6 @@ class Game
 
     def paper_winning?(hand)
       hand == STONE
-    end
-
-    def display_shape_hand(hand)
-      case hand
-      when STONE
-        puts "グー"
-      when SCISSORS
-        puts "チョキ"
-      when PAPER
-        puts "パー"
-      end
     end
   end
 end
