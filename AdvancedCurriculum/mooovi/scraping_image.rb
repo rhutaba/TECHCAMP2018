@@ -1,9 +1,21 @@
 require 'mechanize'
 
+links = []
 agent = Mechanize.new
-page = agent.get("http://review-movie.herokuapp.com/")
-elements = page.search('.poster_link img')
+current_url = "http://review-movie.herokuapp.com/"
+current_page = agent.get(current_url)
+
+elements = current_page.search('h2 a')
 
 elements.each do |element|
-  puts element.get_attribute('src')
+  links << current_url + element[:href]
+end
+
+links.each do |link|
+  url = link
+  page = agent.get(url)
+  elements = page.search('#entry-content-single img')
+  elements.each do |element|
+    puts element[:src]
+  end
 end
