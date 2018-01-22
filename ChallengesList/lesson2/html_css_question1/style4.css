@@ -51,11 +51,10 @@ p {
   width: 660px;
   margin: 0 auto;
   line-height: 26px;
-  padding: 0 30px 0 0;
+  padding: 0 0 30px 0;
 }
 
 footer {
   background-color: #2E2F30;
   height: 80px;
 }
-
