@@ -1,25 +1,56 @@
 class Player
-  class Hand
-    STONE = 0
-    SCISSORS = 1
-    PAPER = 2
+  STONE = 0
+  SCISSORS = 1
+  PAPER = 2
 
-    # 手は、一般的な手の形状を知っている
-    # ※ 本来はじゃんけんの形状以外にももっと知っているはずである
-    HAND_SHAPE = [STONE, SCISSORS, PAPER]
+  HAND_SHAPE = [STONE, SCISSORS, PAPER]
 
-    def hand_shape(hand)
-      if hand.nil?
-        # 心に決めた手がない場合、適当(ランダム)に手の形状を返す
-        @hand = HAND_SHAPE.shuffle.first
-      else
-        # 心に決めた手がある場合、引数の通りに手の形状を返す
-        @hand = hand
-      end
+  def initialize(hand)
+    if HAND_SHAPE.include?(hand)
+      @hand = hand
     end
+  end
 
-    def hand_out
-      @hand
+  def hand_out
+    @hand
+  end
+
+  def recognize(others_hand)
+    @others_hand = others_hand
+  end
+
+  def draw?
+    @hand == @others_hand
+  end
+
+  def win?
+    judge
+  end
+
+  private
+
+  def judge
+    case @hand
+    when STONE
+      stone_wins?
+    when SCISSORS
+      scissors_wins?
+    when PAPER
+      paper_wins?
+    else
+      nil
     end
+  end
+
+  def stone_wins?
+    @others_hand == SCISSORS
+  end
+
+  def scissors_wins?
+    @others_hand == PAPER
+  end
+
+  def paper_wins?
+    @others_hand == STONE
   end
 end

@@ -1,52 +1,43 @@
-class Game
-  class Janken
-    STONE = 0
-    SCISSORS = 1
-    PAPER = 2
-    WIN = true
-    LOSE = false
-    DRAW = nil
+require './hand'
 
-    def initialize
-      @hand_of_player1 = STONE
-      @hand_of_player2 = STONE
-    end
+DRAW = 'draw'
+WIN = 'win'
+LOSE = 'lose'
 
-    def battle(hand_of_player1, hand_of_player2)
-      @hand_of_player1 = hand_of_player1
-      @hand_of_player2 = hand_of_player2
-    end
+def display_hand_shape(player_hand)
+  case player_hand
+  when 0
+    "グー！"
+  when 1
+    "チョキ！"
+  when 2
+    "パー！"
+  end
+end
 
-    # 勝ち: true、負け: false、あいこ: nil
-    def result
-      if draw?
-        nil
-      else
-        case @hand_of_player1
-        when STONE
-          stone_wininng?(@hand_of_player2)
-        when SCISSORS
-          scissors_winning?(@hand_of_player2)
-        when PAPER
-          paper_winning?(@hand_of_player2)
-        end
-      end
-    end
+puts "最初はグー、じゃんけん..."
 
-    def draw?
-      @hand_of_player1 == @hand_of_player2
-    end
+continue = true
 
-    def stone_wininng?(hand)
-      hand == SCISSORS
-    end
+while continue do
+  player = Player.new(rand(0..2))
+  npc = Player.new(rand(0..2))
 
-    def scissors_winning?(hand)
-      hand == PAPER
-    end
+  puts "プレイヤーの手\t: " + display_hand_shape(player.hand_out)
+  puts "NPCの手\t\t: " + display_hand_shape(npc.hand_out)
 
-    def paper_winning?(hand)
-      hand == STONE
+  player.recognize(npc.hand_out)
+
+  if player.draw?
+    puts "あいこで…"
+    puts "----------------------"
+  else
+    if player.win?
+      puts "****プレイヤーの勝利****"
+      continue = false
+    else
+      puts "****NPCの勝利****"
+      continue = false
     end
   end
 end
