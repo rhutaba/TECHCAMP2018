@@ -21,7 +21,7 @@ class Scraping
       break unless next_link
       next_url = next_link[:href]
     end
-    
+
     links.each do |link|
       get_product(link)
     end
