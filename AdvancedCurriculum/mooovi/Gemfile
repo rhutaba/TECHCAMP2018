@@ -46,3 +46,6 @@ gem 'unicorn'
 
 # pry
 gem 'pry-rails'
+
+# スクレイピング
+gem 'mechanize'
