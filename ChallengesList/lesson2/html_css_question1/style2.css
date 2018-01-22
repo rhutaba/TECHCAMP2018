@@ -10,3 +10,44 @@ h1, h2, h3, h4, h5, h6, p, body {
   margin: 0;
   padding: 0;
 }
+
+header {
+  background-color: #2E2F30;
+  height: 80px;
+}
+
+.container {
+  min-width: 960px;
+}
+
+.contents {
+  background-color: #57C3E9;
+  width: 960px;
+  height: 700px;
+  margin: 0 auto;
+}
+
+.upper_left_ccontent {
+  background-color: lightgray;
+  width: 430px;
+  height: 400px;
+  float: left;
+}
+
+.upper_right_ccontent {
+  background-color: lightblue;
+  width: 330px;
+  height: 300px;
+  float: right;
+}
+
+.bottom_ccontent {
+  background-color: lightcyan;
+  height: 60px;
+  clear: both;
+}
+
+footer {
+  background-color: #2E2F30;
+  height: 80px;
+}
