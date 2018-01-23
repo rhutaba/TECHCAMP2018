@@ -17,20 +17,21 @@
             <input type="submit">
           </div>
         </form> -->
-  <div class="message clearfix">
-    <%= image_tag 'cat1.png' %>
-    <div class="message_box">
-      <p class="user_name">
-        野良猫1号
-        <!-- <span class="time">・8月13日</span> -->
-      <p>
-      <p class="text">
-        今日も暇だにゃー、とりあえずゴロゴロするかにゃー、煮干し食べたいにゃー、食べたあとは散歩でも行きたいにゃー。
-        今日も暇だにゃー、とりあえずゴロゴロするかにゃー、煮干し食べたいにゃー、食べたあとは散歩でも行きたいにゃー。
-        今日も暇だにゃー、とりあえずゴロゴロするかにゃー、煮干し食べたいにゃー、食べたあとは散歩でも行きたいにゃー。
-      </p>
+  <% @tweets.each do |tweet| %>
+    <div class="message clearfix">
+      <%= image_tag 'cat1.png' %>
+      <div class="message_box">
+        <p class="user_name">
+          野良猫1号
+          <!-- <span class="time">・8月13日</span> -->
+        <p>
+        <p class="text">
+          <%= tweet.text %>
+        </p>
+      </div>
+
     </div>
-  </div>
+  <% end %>
   <div class="message clearfix">
     <%= image_tag 'cat1.png' %>
     <div class="message_box">
