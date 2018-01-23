@@ -7,5 +7,4 @@ Rails.application.routes.draw do
   delete 'tweets/:id' =>  'tweets#destroy'   #ツイート削除機能
   get   'tweets/:id/edit'  =>  'tweets#edit' #ツイート編集画面
   patch 'tweets/:id'   =>  'tweets#update'   #ツイート更新機能
-  devise_for :users
 end
