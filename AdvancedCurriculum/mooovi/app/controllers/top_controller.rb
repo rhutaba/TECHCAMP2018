@@ -6,7 +6,8 @@ class TopController < ReviewController
 
   def search
     # productsテーブルからキーワードで検索した作品データを20件取り出し、@products変数に入れる処理を書いて下さい
-    @products = []
+    keyword = params[:keyword]
+    @products = Product.where('title LIKE(?)', "%#{keyword}%").limit(20)
   end
 
   private
