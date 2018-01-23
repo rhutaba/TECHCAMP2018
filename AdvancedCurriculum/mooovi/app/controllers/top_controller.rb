@@ -1,7 +1,7 @@
 class TopController < ReviewController
 
   def index
-    @products = [] # productテーブルから最新順に作品データを20件取り出す
+    @products = Product.all.order('updated_at DESC').limit(20)
   end
 
   def search
