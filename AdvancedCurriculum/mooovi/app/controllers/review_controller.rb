@@ -3,11 +3,12 @@ class ReviewController < ApplicationController
 
   def new
     @product = Product.find(params[:id])
+    @review = Review.new
   end
 
   def create
-    # reviews_controller.rbのcreateアクションでデータを受け取り、データベースに保存する処理を書いて下さい
-    # トップページにリダイレクトする処理を書いて下さい
+    # Review.create(review_params)
+    redirect_to controller: :products, action: :index
   end
 
   private
