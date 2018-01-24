@@ -1,9 +1,6 @@
-window.addEventListener("load", function() {
-  var btn = document.querySelector("input");
-
-
-  btn.addEventListener("click", function () {
-    var p = document.querySelector("p");
-    p.innerText = "クリックされた！";
+window.addEventListener("load", function () {
+  $("li").on("click", function () {
+    $('li.selected').removeClass("selected");
+    $(this).addClass("selected");
   });
 });
