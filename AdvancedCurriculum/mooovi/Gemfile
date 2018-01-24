@@ -49,3 +49,6 @@ gem 'pry-rails'
 
 # スクレイピング
 gem 'mechanize'
+
+# ログイン機能
+gem 'devise'
