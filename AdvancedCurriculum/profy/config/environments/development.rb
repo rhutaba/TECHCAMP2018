@@ -49,4 +49,6 @@ Rails.application.configure do
     :port => '2525',
     :authentication => :cram_md5
   }
+
+  config.action_mailer.default_url_options = { host: 'http://localhost:3000', port: 8080 }
 end
