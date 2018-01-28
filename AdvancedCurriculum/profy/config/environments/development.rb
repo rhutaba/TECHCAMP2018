@@ -39,16 +39,16 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
-  # Mailtrapの設定
+  config.action_mailer.default_url_options = { host: 'http://localhost:3000/top', port: 3000 }
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :user_name => 'bbd85bc7a2e3d1',
-    :password => 'f24a4bf01ddbc9',
-    :address => 'smtp.mailtrap.io',
-    :domain => 'smtp.mailtrap.io',
-    :port => '2525',
-    :authentication => :cram_md5
+    :enable_starttls_auto => true,
+    :address => "smtp.gmail.com",
+    :port => 587,
+    :domain => 'smtp.gmail.com',
+    :user_name => "***@gmail.com",
+    :password => "***",
+    :authentication => 'login'
   }
-
-  config.action_mailer.default_url_options = { host: 'http://localhost:3000', port: 8080 }
 end
