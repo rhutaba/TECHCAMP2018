@@ -39,11 +39,13 @@ body {
       height: 40px;
       letter-spacing: -.4em; /* 文字間を詰めて隙間をなくす */
     }
+
     li {
       list-style: none;
       display: inline-block;
       letter-spacing: normal; /* 文字間を元に戻す */
     }
+
     .button {
       display: inline-block;
       width: 200px;
@@ -80,6 +82,51 @@ body {
 
     .top_line {
       border-bottom: 1px solid;
+      overflow: hidden;
+
+      .left_box {
+        float: left;
+      }
+
+      .right_box {
+        float: right;
+        padding-right: 30px;
+      }
+
+      .box_container {
+        overflow: hidden;
+      }
+
+      .box_container:before,
+      .box_container:after {
+        content: "";
+        display: table;
+      }
+
+      .box_container:after {
+        clear: both;
+      }
+
+      // 検索フォーム
+      .search_form {
+        margin-top: 8px;
+
+        .text_search_area {
+          text-align: center;
+          height: 18px;
+        }
+
+        input, textarea {
+          outline: none;
+          border: 1px solid #ffc700;
+          border-radius: 4px;
+          width: 200px;
+        }
+        input:focus, textarea:focus {
+          box-shadow: 0 0 8px #ffa700;
+          border: 1px solid #ffa700;
+        }
+      }
     }
 
     .second_line {

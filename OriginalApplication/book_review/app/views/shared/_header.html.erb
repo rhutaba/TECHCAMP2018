@@ -1,8 +1,17 @@
 <div class="header">
   <div class="top_line">
-    <ul class="top_line_menu">
-      <li><%= link_to "TOP LINK", root_path, class: 'menu_link button', id: 'top_link' %></li>
-    </ul>
+    <div class="box_container">
+      <div class="left_box">
+        <ul class="top_line_menu">
+          <li><%= link_to "TOP LINK", root_path, class: 'menu_link button', id: 'top_link' %></li>
+        </ul>
+      </div>
+      <div class="right_box">
+        <%= form_tag root_path, class: 'search_form' do %>
+          <%= text_field_tag :hoge, "", placeholder: "検索", class: 'text_search_area' %>
+        <% end %>
+      </div>
+    </div>
   </div>
   <div class="second_line">
     <ul class="second_line_menu">
