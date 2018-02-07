@@ -14,7 +14,7 @@
 
   .container {
     background-color: #ffc700;
-    height: 800px;
+    min-height: 600px;
     margin: 0 200px;
   }
 
@@ -24,6 +24,8 @@
     height: 400px;
 
     .catch_phrase {
+      margin: 5px 5px;
+      padding: 5px 5px;
       color: white;
       display: flex;
       align-items: center;
@@ -36,12 +38,17 @@
   }
 
   .content_detail {
+    margin: 5px 5px;
+    padding: 5px 5px;
+
     .reviewed_book {
-      margin: 5px 5px;
-      padding: 5px 5px;
+      margin: 3px 3px 3px 3px;
+      padding: 3px 3px 3px 3px;
       width: 400px;
       height: 100%;
       border: 1px solid;
+      border-radius: 8px;
+      display: inline-block;
     }
 
     .reviewed_book:before,
