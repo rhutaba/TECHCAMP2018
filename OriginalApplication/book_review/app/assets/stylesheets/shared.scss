@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  background-color: gold;
+
+  font-family: "Hiragino Kaku Gothic Pro", Meiryo, "メイリオ", Helvetica, arial, "MS PGothic", sans-serif;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Hiragino Kaku Gothic Pro", Meiryo, "メイリオ", Helvetica, arial, "MS PGothic", sans-serif;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h6 {
+    font-size: 16px;
+  }
+
+  .header {
+    ul {
+      margin: 0;
+      padding-left: 0;
+      height: 40px;
+      letter-spacing: -.4em; /* 文字間を詰めて隙間をなくす */
+    }
+    li {
+      list-style: none;
+      display: inline-block;
+      letter-spacing: normal; /* 文字間を元に戻す */
+    }
+    .button {
+      display: inline-block;
+      width: 200px;
+      height: 40px;
+      text-align: center;
+      text-decoration: none;
+      line-height: 40px;
+      outline: none;
+      background-color: #ffc700;
+      color: #000;
+    }
+
+    .button::before,
+    .button::after {
+      position: absolute;
+      z-index: -1;
+      display: block;
+      content: '';
+    }
+
+    .button:hover {
+      background-color: #ffa700;
+    }
+
+    .button,
+    .button::before,
+    .button::after {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: all .3s;
+      transition: all .3s;
+    }
+
+    .top_line {
+      border-bottom: 1px solid;
+    }
+
+    .second_line {
+      border-bottom: 1px solid;
+
+      ul {
+        padding-left: 200px;
+        height: 60px;
+      }
+
+      .button {
+        height: 60px;
+        line-height: 60px;
+      }
+    }
+  }
+}
