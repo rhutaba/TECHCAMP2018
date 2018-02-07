@@ -1,7 +1,14 @@
+html, body {
+  height: 100%;
+}
+
 body {
+  width: 100%;
+  position: relative;
+  min-height: 100%;
   margin: 0;
   background-color: gold;
-
+  padding-bottom:140px; /*フッターの高さと同じ*/
   font-family: "Hiragino Kaku Gothic Pro", Meiryo, "メイリオ", Helvetica, arial, "MS PGothic", sans-serif;
 
   h1, h2, h3, h4, h5, h6 {
@@ -140,6 +147,22 @@ body {
       .button {
         height: 60px;
         line-height: 60px;
+      }
+    }
+  }
+
+  .footer {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    font-family: "Hiragino Kaku Gothic Pro", Meiryo, "メイリオ", Helvetica, arial, "MS PGothic", sans-serif;
+
+    .container {
+      border-top: 1px solid;
+      p.copyright {
+        font-size: 12px;
+        text-align: center;
       }
     }
   }
