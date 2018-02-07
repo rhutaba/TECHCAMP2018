@@ -1,7 +1,65 @@
 .contents {
+  .float_clear {
+    clear: both;
+  }
+
+  .float_left {
+    float: left;
+  }
+
+  .content {
+    border: 1px solid;
+    border-radius: 8px;
+  }
+
   .container {
     background-color: #ffc700;
     height: 800px;
     margin: 0 200px;
+  }
+
+  .catch {
+    background-image: image-url("image_book.jpg");
+    width: 1280px;
+    height: 400px;
+
+    .catch_phrase {
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .pickup {
+    margin: 5px 5px;
+    padding: 5px 5px;
+  }
+
+  .content_detail {
+    .reviewed_book {
+      margin: 5px 5px;
+      padding: 5px 5px;
+      width: 400px;
+      height: 100%;
+      border: 1px solid;
+    }
+
+    .reviewed_book:before,
+    .reviewed_book:after {
+      content: "";
+      display: table;
+    }
+
+    .book_visual {
+      margin: 5px 5px;
+      padding: 5px 5px;
+      border: 1px solid;
+    }
+  }
+
+  .content_detail:before,
+  .content_detail:after {
+    content: "";
+    display: table;
   }
 }
