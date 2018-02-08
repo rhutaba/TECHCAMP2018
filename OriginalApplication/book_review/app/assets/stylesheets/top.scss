@@ -39,7 +39,7 @@ $CONTENT_WIDTH: 1280px;
     margin: 5px 5px;
     padding: 5px 5px;
 
-    .reviewed_book {
+    .review_card {
       margin: 1px 1px 5px 1px;
       padding: 6px;
       width: 400px;
@@ -48,27 +48,34 @@ $CONTENT_WIDTH: 1280px;
       border-radius: 8px;
       display: inline-block;
 
-      .float_container {
-        .book_title {
-          font-size: medium;
-          border-bottom: 1px solid;
-        }
+      .book_title {
+        font-size: medium;
+        border-bottom: 1px solid;
+      }
+
+      .user_review {
+        height: 290px;
+        border: 1px solid;
 
         .book_visual {
-          margin: 3px 3px 3px 6px;
-          padding: 3px;
+          float: left;
+          border: 1px solid;
         }
 
-        .user_review {
-          margin: 3px;
-          padding: 3px;
+        .user_review_text {
+          border: 1px solid;
+          // white-space: nowrap;
+          // overflow: hidden;
+          // text-overflow: ellipsis;
         }
       }
 
       .review_link {
-        padding-top: 10px ;
+        padding-top: 10px;
         text-align: center;
         border-top: 1px solid;
+        position: relative;
+        top: 10px;
 
         ul, li {
           padding: 0;
