@@ -34,6 +34,60 @@ html, body {
     font-size: 16px;
   }
 
+
+  input, textarea {
+    outline: none;
+    border: 1px solid #ffc700;
+    border-radius: 4px;
+    margin: 5px;
+    padding-left: 10px;
+  }
+
+  input:focus, textarea:focus {
+    box-shadow: 0 0 8px #ffa700;
+    border: 1px solid #ffa700;
+  }
+
+  button.submit_button {
+    font-size: medium;
+    font-weight: bold;
+    color: #fff;
+
+    /* 縦方向に10px、横方向に30pxの余白を指定 */
+    padding: 10px 30px;
+
+    /* ボーダーをなくす */
+    border-style: none;
+
+    /* ボタンの影の指定、影の横幅を2px
+     * 縦長を2px、
+     * ぼかしを3px
+     * 広がりを1px
+     * 色を#666（グレー）に指定 */
+    box-shadow: 2px 2px 3px 1px #666;
+    -moz-box-shadow: 2px 2px 3px 1px #666;
+    -webkit-box-shadow: 2px 2px 3px 1px #666;
+
+    /* テキストの影の指定
+     * 影の横幅を1px
+     * 縦長を1px
+     * ぼかしを2px
+     * 色を#000（黒）に指定 */
+    text-shadow: 1px 1px 2px #000;
+
+    /* 背景色を濃い青色に指定 */
+    background-color: #48c;
+
+    /* 角丸の指定 */
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+  button.submit_button:hover {
+    /* 透明度を10%に指定 */
+    opacity: 0.90;
+  }
 }
 
 .header {
@@ -121,15 +175,9 @@ html, body {
         height: 18px;
       }
 
+      // 検索フォームの
       input, textarea {
-        outline: none;
-        border: 1px solid #ffc700;
-        border-radius: 4px;
         width: 200px;
-      }
-      input:focus, textarea:focus {
-        box-shadow: 0 0 8px #ffa700;
-        border: 1px solid #ffa700;
       }
     }
   }
