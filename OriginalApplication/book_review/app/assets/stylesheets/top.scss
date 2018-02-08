@@ -1,6 +1,12 @@
-$CONTENT_WIDTH : 1280px;
+$CONTENT_WIDTH: 1280px;
 
-.contents {
+.index_container {
+  padding: 5px;
+  background-color: #ffc700;
+  width: $CONTENT_WIDTH;
+  min-height: 600px;
+  margin: 0 200px;
+
   .float_clear {
     clear: both;
   }
@@ -9,27 +15,16 @@ $CONTENT_WIDTH : 1280px;
     float: left;
   }
 
-  .content {
-    width: $CONTENT_WIDTH;
-    border: 1px solid;
-    border-radius: 8px;
-  }
-
-  .container {
-    background-color: #ffc700;
-    width: $CONTENT_WIDTH;
-    min-height: 600px;
-    margin: 0 200px;
-  }
-
   .catch {
+    margin: 0px 0px;
+    padding-left: 5px;
+    padding-top: 5px;
     background-image: image-url("image_book.jpg");
     height: 400px;
 
     .catch_phrase {
-      margin: 5px 5px;
-      padding: 5px 5px;
-      color: white;
+      padding-left: 20px;
+      color: #F0F0F0;
       display: flex;
       align-items: center;
     }
@@ -45,31 +40,30 @@ $CONTENT_WIDTH : 1280px;
     padding: 5px 5px;
 
     .reviewed_book {
-      margin: 3px 3px 3px 3px;
-      padding: 3px 3px 3px 3px;
+      margin: 1px 1px 5px 1px;
+      padding: 6px;
       width: 400px;
       height: 400px;
       border: 1px solid;
       border-radius: 8px;
       display: inline-block;
-    }
 
-    .reviewed_book:before,
-    .reviewed_book:after {
-      content: "";
-      display: table;
-    }
+      .float_container {
+        .book_title {
+          font-size: medium;
+          border-bottom: 1px solid;
+        }
 
-    .book_visual {
-      margin: 5px 5px;
-      padding: 5px 5px;
-      border: 1px solid;
-    }
+        .book_visual {
+          margin: 3px 3px 3px 6px;
+          padding: 3px;
+        }
 
-    .book_title {
-      padding: 5px;
-      font-size: medium;
-      border-bottom: 1px solid;
+        .user_review {
+          margin: 3px;
+          padding: 3px;
+        }
+      }
     }
   }
 
