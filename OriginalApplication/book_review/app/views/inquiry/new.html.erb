@@ -1,29 +1,37 @@
 <div class="inquiry_container">
+  <div class="inquiry_header">
   <h1>お問合わせフォーム</h1>
-  ※ 送信頂いた内容は、回答とサービスの改善に利用させていただきます。
-  <%= form_for @inquiry, url: inquiry_index_path do |form| %>
-    <div>
-      <h2>サポートからの返信・回答用の情報</h2>
-      <% form.label :user_name %>
-      <%= form.text_field :user_name, placeholder: '氏名' %>
-    </div>
-    <div>
-      <% form.label :target_url %>
-      <%= form.text_field :target_url, placeholder: '問い合わせしたいページのURL' %>
-    </div>
-    <div>
-      <% form.label :email %>
-      <%= form.text_field :email, placeholder: 'Emailアドレス' %>
-    </div>
-    <h2>サポートへの問い合わせ内容</h2>
-    <div>
-      <% form.label :inquiry_text %>
-      <%= form.text_area :inquiry_text, placeholder: 'お問合わせの内容' %>
-    </div>
-    <div>
-      <%= button_tag type: 'submit' do %>
-        投稿する
-      <% end %>
-    </div>
-  <% end %>
+    <p>※ 送信頂いた内容は、回答とサービスの改善に利用させていただきます。</p>
+  </div>
+  <div class="content">
+    <%= form_for @inquiry, url: inquiry_index_path do |form| %>
+      <div class="inquiry_information user_information">
+        <div>
+          <h2 class="annotation">サポートからの返信・回答用の情報</h2>
+          <% form.label :user_name %>
+          <%= form.text_field :user_name, placeholder: '氏名', class: 'inquiry_text_field' %>
+        </div>
+        <div>
+          <% form.label :target_url %>
+          <%= form.text_field :target_url, placeholder: '問い合わせしたいページのURL', class: 'inquiry_text_field' %>
+        </div>
+        <div>
+          <% form.label :email %>
+          <%= form.text_field :email, placeholder: 'Emailアドレス', class: 'inquiry_text_field'%>
+        </div>
+      </div>
+      <div class="inquiry_information user_inquiry_post">
+        <h2 class="annotation">サポートへの送信・問い合わせ内容</h2>
+        <div>
+          <% form.label :inquiry_text %>
+          <%= form.text_area :inquiry_text, placeholder: '問合わせの内容', class: 'inquiry_text_area' %>
+        </div>
+        <div>
+          <%= button_tag type: 'submit', class: 'submit_button' do %>
+            問い合わせを送信する
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
