@@ -34,6 +34,17 @@ html, body {
     font-size: 16px;
   }
 
+  .site_logo {
+    height: 40px;
+    width: 200px;
+    display: inline-block;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+    background-color: #ffc700;
+    color: white;
+  }
 
   input, textarea {
     outline: none;
@@ -88,6 +99,44 @@ html, body {
     /* 透明度を10%に指定 */
     opacity: 0.90;
   }
+
+  ul {
+    .menu {
+      width: 200px;
+      height: 60px;
+      display: inline-block;
+      outline: none;
+      border-left: dotted 1px;
+      border-right: dotted 1px;
+      text-align: center;
+      text-decoration: none;
+      line-height: 60px;
+      background-color: #ffc700;
+      color: #000;
+    }
+
+    .menu::before,
+    .menu::after {
+      position: absolute;
+      z-index: -1;
+      display: block;
+      content: '';
+    }
+
+    .menu:hover {
+      background-color: #ffa700;
+    }
+
+    .menu,
+    .menu::before,
+    .menu::after {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: all .3s;
+      transition: all .3s;
+    }
+  }
 }
 
 .header {
@@ -103,40 +152,6 @@ html, body {
     list-style: none;
     display: inline-block;
     letter-spacing: normal; /* 文字間を元に戻す */
-  }
-
-  .button {
-    display: inline-block;
-    width: 200px;
-    height: 40px;
-    text-align: center;
-    text-decoration: none;
-    line-height: 40px;
-    outline: none;
-    background-color: #ffc700;
-    color: #000;
-  }
-
-  .button::before,
-  .button::after {
-    position: absolute;
-    z-index: -1;
-    display: block;
-    content: '';
-  }
-
-  .button:hover {
-    background-color: #ffa700;
-  }
-
-  .button,
-  .button::before,
-  .button::after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-transition: all .3s;
-    transition: all .3s;
   }
 
   .top_line {
@@ -189,10 +204,6 @@ html, body {
     ul {
       padding-left: 200px;
       height: 60px;
-      .button {
-        height: 60px;
-        line-height: 60px;
-      }
     }
   }
 }
