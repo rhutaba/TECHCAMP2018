@@ -1,4 +1,4 @@
-$CONTENT_WIDTH : 1280px;
+$CONTENT_WIDTH: 1280px;
 
 html, body {
   height: 100%;
@@ -188,12 +188,8 @@ html, body {
       margin-top: 8px;
 
       .text_search_area {
-        text-align: center;
+        text-align: left;
         height: 18px;
-      }
-
-      // 検索フォームの
-      input, textarea {
         width: 200px;
       }
     }
