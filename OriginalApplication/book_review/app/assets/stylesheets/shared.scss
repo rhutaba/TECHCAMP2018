@@ -142,6 +142,7 @@ html, body {
 }
 
 .header {
+  min-width: $CONTENT_WIDTH;
   // メニューボタンの標準スタイル
   ul {
     margin: 0;
