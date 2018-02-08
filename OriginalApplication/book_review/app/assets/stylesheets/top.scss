@@ -51,22 +51,22 @@ $CONTENT_WIDTH: 1280px;
       .book_title {
         font-size: medium;
         border-bottom: 1px solid;
+        text-overflow: ellipsis;
       }
 
       .user_review {
         height: 290px;
-        border: 1px solid;
+        clear: both;
+        display: block;
 
         .book_visual {
-          float: left;
-          border: 1px solid;
+          float: left;     // レビュー本文の右側に回り込み
         }
 
         .user_review_text {
-          border: 1px solid;
-          // white-space: nowrap;
-          // overflow: hidden;
-          // text-overflow: ellipsis;
+          float: right;     // 画像の右側に回り込み
+          width: 280px;
+          height: 290px;
         }
       }
 
