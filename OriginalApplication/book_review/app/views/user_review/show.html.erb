@@ -1,8 +1,25 @@
 <div class="user_review_container">
   <div class="content">
-    <p>ユーザーレビューの仮実装です。</p>
-    <p>タイトル: <%= @user_review.book.title %></p>
-    <p>評価(1-10): <%= @user_review.book_evaluation %></p>
-    <p>レビュー内容: <%= @user_review.review_text %></p>
+    <div class="user_review">
+      <div class="book_information">
+        <div class="book_visual">画像</div>
+        <div class="book_detail_information">
+          <p>タイトル: <%= @user_review.book.title %></p>
+          <p>ISBNコード: <%= @user_review.book.isbn_code_without_hyphen %></p>
+        </div>
+      </div>
+      <div class="user_review_text">
+        <span>
+          <p>評価(1-10): <%= @user_review.book_evaluation %></p>
+        </span>
+        <span>
+          <p>レビュー内容: <%= @user_review.review_text %></p>
+        </span>
+      </div>
+    </div>
+    <div class="outside_link">
+      <div class="recommend_link">いま話題の本</div>
+      <div class="affiliate_link">アフィリエイトリンク</div>
+    </div>
   </div>
 </div>
