@@ -10,6 +10,10 @@ html, body {
   padding-bottom: 140px; /*フッターの高さと同じ*/
   font-family: "Hiragino Kaku Gothic Pro", Meiryo, "メイリオ", Helvetica, arial, "MS PGothic", sans-serif;
 
+  a {
+    text-decoration: none;
+  }
+  
   h1 {
     font-size: 32px;
   }

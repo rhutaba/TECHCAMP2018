@@ -64,6 +64,18 @@ $CONTENT_WIDTH: 1280px;
           padding: 3px;
         }
       }
+
+      .review_link {
+        padding-top: 10px ;
+        text-align: center;
+        border-top: 1px solid;
+
+        ul, li {
+          padding: 0;
+          list-style: none;
+          display: inline;
+        }
+      }
     }
   }
 
