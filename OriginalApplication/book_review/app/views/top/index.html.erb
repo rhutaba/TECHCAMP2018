@@ -16,10 +16,9 @@
     <div class="content_detail">
       <h2>レビュー</h2>
       <!--ここにrender partial: reviewsを入れる-->
-      <%= render partial: 'user_review_card' %>
-      <%= render partial: 'user_review_card' %>
-      <%= render partial: 'user_review_card' %>
-      <%= render partial: 'user_review_card' %>
+      <% @user_reviews.each do %>
+        <%= render partial: 'user_review_card' %>
+      <% end %>
     </div>
   </div>
 </div>
