@@ -5,7 +5,6 @@ class InquiryController < ApplicationController
 
   def create
     Inquiry.create(inquiry_params)
-    redirect_to root_path
   end
 
   private
