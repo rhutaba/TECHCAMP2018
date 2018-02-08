@@ -1,3 +1,9 @@
-// Place all the styles related to the user_review controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.user_review_container {
+  $CONTENT_WIDTH: 1280px;
+
+  padding: 5px;
+  background-color: #ffc700;
+  width: $CONTENT_WIDTH;
+  min-height: 600px;
+  margin: 0 200px;
+}
