@@ -7,8 +7,8 @@
         </ul>
       </div>
       <div class="right_box">
-        <%= form_tag root_path, class: 'search_form' do %>
-          <%= text_field_tag :hoge, "", placeholder: "レビューの検索", class: 'text_search_area' %>
+        <%= form_tag search_books_path, class: 'search_form', method: :get do %>
+          <%= text_field_tag :search_keyword, "", placeholder: "レビューの検索", class: 'text_search_area' %>
         <% end %>
       </div>
     </div>
