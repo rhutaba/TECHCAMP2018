@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
+
+    resources :user_reviews, only: [:show]
   end
-  resources :user_reviews, only: [:show]
 end
