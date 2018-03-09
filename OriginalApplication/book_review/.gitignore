@@ -17,6 +17,4 @@
 /yarn-error.log
 
 .byebug_history
-
-# Ignore idea
-/.idea/
+.idea/

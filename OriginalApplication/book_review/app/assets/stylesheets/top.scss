@@ -1,0 +1,97 @@
+$CONTENT_WIDTH: 1280px;
+
+.index_container {
+  padding: 5px;
+  background-color: #ffc700;
+  width: $CONTENT_WIDTH;
+  min-height: 600px;
+  margin: 0 200px;
+
+  .float_clear {
+    clear: both;
+  }
+
+  .float_left {
+    float: left;
+  }
+
+  .catch {
+    margin: -5px -5px;
+    padding-left: 5px;
+    padding-top: 5px;
+    background-image: image-url("image_book.jpg");
+    height: 400px;
+
+    .catch_phrase {
+      padding-left: 20px;
+      color: #F0F0F0;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .pickup {
+    margin: 5px 5px;
+    padding: 5px 5px;
+  }
+
+  .content_detail {
+    margin: 5px 5px;
+    padding: 5px 5px;
+
+    .review_card {
+      margin: 1px 1px 5px 1px;
+      padding: 6px;
+      width: 400px;
+      height: 400px;
+      border: 1px solid;
+      border-radius: 8px;
+      display: inline-block;
+
+      .book_title {
+        font-size: medium;
+        border-bottom: 1px solid;
+        overflow: hidden; // 行の横幅を超えると省略
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .user_review {
+        height: 290px;
+        clear: both;
+        display: block;
+
+        .book_visual {
+          float: left;     // レビュー本文の右側に回り込み
+        }
+
+        .user_review_text {
+          float: right;     // 画像の右側に回り込み
+          width: 280px;
+          height: 290px;
+          overflow: hidden; // 表示範囲を超えると省略
+        }
+      }
+
+      .review_link {
+        padding-top: 10px;
+        text-align: center;
+        border-top: 1px solid;
+        position: relative;
+        top: 10px;
+
+        ul, li {
+          padding: 0;
+          list-style: none;
+          display: inline;
+        }
+      }
+    }
+  }
+
+  .content_detail:before,
+  .content_detail:after {
+    content: "";
+    display: table;
+  }
+}

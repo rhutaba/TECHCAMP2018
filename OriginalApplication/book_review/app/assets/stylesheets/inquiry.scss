@@ -1,0 +1,40 @@
+.inquiry_container {
+  padding: 5px;
+  margin-left: 200px;
+  width: 1280px;
+  text-align: center;
+
+  .submit_button {
+    width: 40%;
+  }
+}
+
+.annotation {
+  font-size: medium;
+}
+
+.inquiry_header {
+  p {
+    font-size: small;
+  }
+}
+
+.inquiry_information {
+  padding: 15px;
+}
+
+.user_information {
+}
+
+.user_inquiry_post {
+}
+
+.inquiry_text_field {
+  width: 90%;
+  height: 50px;
+}
+
+.inquiry_text_area {
+  width: 90%;
+  height: 250px;
+}

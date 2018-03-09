@@ -1,0 +1,228 @@
+$CONTENT_WIDTH: 1280px;
+
+html, body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  background-color: gold;
+  padding-bottom: 140px; /*フッターの高さと同じ*/
+  font-family: "Hiragino Kaku Gothic Pro", Meiryo, "メイリオ", Helvetica, arial, "MS PGothic", sans-serif;
+
+  a {
+    text-decoration: none;
+  }
+  
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h6 {
+    font-size: 16px;
+  }
+
+  .site_logo {
+    font-family: Kefa;
+    font-size: 16px;
+    height: 40px;
+    width: 200px;
+    display: inline-block;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+    background-color: #ffc700;
+    color: white;
+  }
+
+  input, textarea {
+    outline: none;
+    border: 1px solid #ffc700;
+    border-radius: 4px;
+    margin: 5px;
+    padding-left: 10px;
+  }
+
+  input:focus, textarea:focus {
+    box-shadow: 0 0 8px #ffa700;
+    border: 1px solid #ffa700;
+  }
+
+  button.submit_button {
+    font-size: medium;
+    font-weight: bold;
+    color: #fff;
+
+    /* 縦方向に10px、横方向に30pxの余白を指定 */
+    padding: 10px 30px;
+
+    /* ボーダーをなくす */
+    border-style: none;
+
+    /* ボタンの影の指定、影の横幅を2px
+     * 縦長を2px、
+     * ぼかしを3px
+     * 広がりを1px
+     * 色を#666（グレー）に指定 */
+    box-shadow: 2px 2px 3px 1px #666;
+    -moz-box-shadow: 2px 2px 3px 1px #666;
+    -webkit-box-shadow: 2px 2px 3px 1px #666;
+
+    /* テキストの影の指定
+     * 影の横幅を1px
+     * 縦長を1px
+     * ぼかしを2px
+     * 色を#000（黒）に指定 */
+    text-shadow: 1px 1px 2px #000;
+
+    /* 背景色を濃い青色に指定 */
+    background-color: #48c;
+
+    /* 角丸の指定 */
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+  button.submit_button:hover {
+    /* 透明度を10%に指定 */
+    opacity: 0.90;
+  }
+
+  ul {
+    .menu {
+      width: 200px;
+      height: 60px;
+      display: inline-block;
+      outline: none;
+      border-left: dotted 1px;
+      border-right: dotted 1px;
+      text-align: center;
+      text-decoration: none;
+      line-height: 60px;
+      background-color: #ffc700;
+      color: #000;
+    }
+
+    .menu::before,
+    .menu::after {
+      position: absolute;
+      z-index: -1;
+      display: block;
+      content: '';
+    }
+
+    .menu:hover {
+      background-color: #ffa700;
+    }
+
+    .menu,
+    .menu::before,
+    .menu::after {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: all .3s;
+      transition: all .3s;
+    }
+  }
+}
+
+.header {
+  min-width: $CONTENT_WIDTH;
+  // メニューボタンの標準スタイル
+  ul {
+    margin: 0;
+    padding-left: 0;
+    height: 40px;
+    letter-spacing: -.4em; /* 文字間を詰めて隙間をなくす */
+  }
+
+  li {
+    list-style: none;
+    display: inline-block;
+    letter-spacing: normal; /* 文字間を元に戻す */
+  }
+
+  .top_line {
+    border-bottom: 1px solid;
+    overflow: hidden;
+
+    .left_box {
+      float: left;
+    }
+
+    .right_box {
+      float: right;
+      padding-right: 30px;
+    }
+
+    .box_container {
+      overflow: hidden;
+    }
+
+    .box_container:before,
+    .box_container:after {
+      content: "";
+      display: table;
+    }
+
+    .box_container:after {
+      clear: both;
+    }
+
+    // 検索フォーム
+    .search_form {
+      margin-top: 8px;
+
+      .text_search_area {
+        text-align: left;
+        height: 18px;
+        width: 200px;
+      }
+    }
+  }
+
+  .second_line {
+    border-bottom: 1px solid;
+
+    // top_lineとメニューの高さを変更
+    ul {
+      padding-left: 200px;
+      height: 60px;
+    }
+  }
+}
+
+.content {
+  width: $CONTENT_WIDTH;
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  border-top: 1px solid;
+
+  p.copyright {
+    font-size: 12px;
+    text-align: center;
+  }
+}
